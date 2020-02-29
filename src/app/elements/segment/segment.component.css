@@ -1,0 +1,5 @@
+div.ui.icon.header:empty {
+    display: none;
+}
+
+/* If nothing was pased inside a header, then don't show it and the margin associated with it */
