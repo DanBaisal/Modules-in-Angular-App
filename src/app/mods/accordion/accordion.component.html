@@ -1,0 +1,19 @@
+<div class="ui accordion styled">
+    <ng-container *ngFor="let item of items; let i = index">
+        <div [ngClass]="{ active: i === openedItemIndex }" 
+            class="title" 
+            (click)="onClick(i)"
+            >
+            <i class="dropdown icon"></i>
+            {{ item.title }}
+        </div>
+        <div [ngClass]="{ active: i === openedItemIndex }" class="content">
+            <p>{{ item.content }}</p>
+        </div>
+    </ng-container>
+</div>
+
+<!-- We use ng-container instead of a div, because in Semantic UI title and content don't have any wrapping div at all and that's why
+we don't need it here -->
+
+<!-- Add the class of active if i equals to openedItemIndex -->
